@@ -1,0 +1,10 @@
+ROPLevel4 created by Billy Ellis (@bellis1000)
+
+This goal of this exploit exercise is to call the secret() function by exploiting a classic stack buffer overflow. Sounds simple? Yes... but this level has ASLR enabled.
+
+ASLR randomises the address space of the program every time it is run. Using an address found from a static analysis of the binary will not be enough to complete this challenge as the address of secret() will change each time you execute the program.
+
+To assist you, ROPLevel4 will give you an info leak so you don't have to think about discovering your own. It will leak the address of a string stored in the binary, but will not tell you the address of secret().
+
+Writeup/tutorial available (soon?) here http://billyellis.net
+Video version will be eventually available somewhere on my channel https://www.youtube.com/channel/UCk2sx_3FUkKvDGlIhdUQa8A

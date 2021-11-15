@@ -1,0 +1,20 @@
+Welcome to ROPLevel3! 
+created by Billy Ellis (@bellis1000)
+
+If you haven't already, be sure to complete both ROPLevel1 & ROPLevel2 before attempting ROPLevel3 (unless of course you're already an expert in ROP ;P)
+
+ROPLevel3 introduces the idea of "runtime patching". This can be accomplished by using a "write anywhere" style ROP gadget. This gadgets allow you to specify the data *and* the location in memory to write to, giving you the ability to overwrite instructions and data in the running process.
+
+Real world uses of such gadgets include: applying patches to the kernel in order to disable various security features.
+
+==========================================================================
+
+ROPLevel3 is a simple program that gives you 3 options. One of these options (option 2) is protected by a variable "internal_mode" which is set to "0" by default. When this is set to "0" the program will not allow option 2 to be used. The variable must be set to "1" (or actually anything but 0) to allow option 2 to be used.
+
+In terms of jailbreaking, think of "internal_mode" as something like "cs_enforcement_disable", which when set to 0 will require applications on iOS to have a valid digital signature before they are launched and patching this variable to 1 will allow any app to run whether it is signed or not.
+
+As the binary is very small, the required gadgets have been hard coded in as separate functions.
+
+Write-up available (soon) at http://billyellis.net 
+
+Enjoy ;P
